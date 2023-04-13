@@ -1,20 +1,25 @@
 .header {
-    height: 70px;
-    background-color: #333333;
+  height: 70px;
+  background-color: #333333;
 }
 .headerList {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 16px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
 }
 .headerList > li {
-    
+}
+.headerList > li:last-child {
+  color: #ffffff;
+  margin-left: auto;
+  font-size: 14px;
 }
 .headerList > li + li {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 .headerList > li > a {
-    text-decoration: none;
-    color: #FFFFFF;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
 }

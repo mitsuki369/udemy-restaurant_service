@@ -1,0 +1,43 @@
+[debug] [2023-04-13T06:23:02.676Z] ----------------------------------------------------------------------
+[debug] [2023-04-13T06:23:02.679Z] Command:       /Users/kokiinada/.nodenv/versions/14.13.1/bin/node /Users/kokiinada/.npm-global/bin/firebase deploy
+[debug] [2023-04-13T06:23:02.679Z] CLI Version:   9.10.0
+[debug] [2023-04-13T06:23:02.679Z] Platform:      darwin
+[debug] [2023-04-13T06:23:02.680Z] Node Version:  v14.13.1
+[debug] [2023-04-13T06:23:02.683Z] Time:          Thu Apr 13 2023 15:23:02 GMT+0900 (日本標準時)
+[debug] [2023-04-13T06:23:02.683Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-13T06:23:02.695Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-04-13T06:23:02.735Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-13T06:23:02.735Z] > authorizing via signed-in user (k.inada@leihauoli.com)
+[debug] [2023-04-13T06:23:02.735Z] [iam] checking project restaurants-dea43 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-13T06:23:02.737Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2023-04-13T06:23:02.737Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2023-04-13T06:23:03.934Z] <<< HTTP RESPONSE 400 {"date":"Thu, 13 Apr 2023 06:23:03 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2023-04-13T06:23:03.936Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/restaurants-dea43:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-13T06:23:04.155Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-04-13T06:23:04.156Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-04-13T06:23:05.628Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Thu, 13 Apr 2023 06:23:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=542","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2023-04-13T06:23:05.628Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2023-04-13T06:23:05.632Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-04-13T06:23:05.633Z] > refreshing access token with scopes: []
+[debug] [2023-04-13T06:23:05.633Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2023-04-13T06:23:05.754Z] <<< HTTP RESPONSE 400 {"date":"Thu, 13 Apr 2023 06:23:05 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2023-04-13T06:23:05.757Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/restaurants-dea43 [none]
+[debug] [2023-04-13T06:23:06.947Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/restaurants-dea43 401
+[debug] [2023-04-13T06:23:06.948Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/restaurants-dea43 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-04-13T06:23:06.948Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-04-13T06:23:08.122Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/Users/kokiinada/.npm-global/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Client.doRequest (/Users/kokiinada/.npm-global/lib/node_modules/firebase-tools/lib/apiv2.js:238:23)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Client.request (/Users/kokiinada/.npm-global/lib/node_modules/firebase-tools/lib/apiv2.js:96:20)
+    at async Object.getFirebaseProject (/Users/kokiinada/.npm-global/lib/node_modules/firebase-tools/lib/management/projects.js:290:21)
+    at async Object.getDefaultHostingSite (/Users/kokiinada/.npm-global/lib/node_modules/firebase-tools/lib/getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (/Users/kokiinada/.npm-global/lib/node_modules/firebase-tools/lib/requireHostingSite.js:9:18)
+    at async Object.fn (/Users/kokiinada/.npm-global/lib/node_modules/firebase-tools/lib/commands/deploy.js:66:9)
+    at async /Users/kokiinada/.npm-global/lib/node_modules/firebase-tools/lib/command.js:169:17
+[error] 
+[error] Error: Failed to get Firebase project restaurants-dea43. Please make sure the project exists and your account has permission to access it.

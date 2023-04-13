@@ -1,10 +1,16 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-ul,ol {
-    list-style-type: none;
+ul,
+ol {
+  list-style-type: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+.container-fluid {
+  max-width: 1166px;
+  padding: 0 83px;
+  margin: 0 auto;
 }
